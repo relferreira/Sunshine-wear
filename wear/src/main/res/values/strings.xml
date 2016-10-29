@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Wear</string>
+    <string name="my_digital_name">Sunshine Digital</string>
+    <string name="date_format">EEE, MMM d yyyy</string>
+    <string name="time_format">HH:mm</string>
+    <string name="temperature_format">##</string>
+</resources>

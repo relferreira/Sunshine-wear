@@ -70,7 +70,6 @@ public class LocationEditTextPreference extends EditTextPreference {
         currentLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Context context = getContext();
 
                 // Launch the Place Picker so that the user can specify their location, and then
                 // return the result to SettingsActivity.
@@ -81,10 +80,10 @@ public class LocationEditTextPreference extends EditTextPreference {
                 // an activity that we can use to start our Place Picker intent. By using
                 // SettingsActivity in this way, we can ensure the result of the Place Picker
                 // intent comes to the right place for us to process it.
-                Activity settingsActivity = (SettingsActivity) context;
+                Activity settingsActivity = (SettingsActivity) getContext();
                 try {
                     settingsActivity.startActivityForResult(
-                            builder.build(context), SettingsActivity.PLACE_PICKER_REQUEST);
+                            builder.build(settingsActivity), SettingsActivity.PLACE_PICKER_REQUEST);
 
                 } catch (GooglePlayServicesNotAvailableException
                         | GooglePlayServicesRepairableException e) {
